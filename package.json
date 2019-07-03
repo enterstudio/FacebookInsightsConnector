@@ -10,7 +10,9 @@
     "deploy": "gulp deploy",
     "dev-server": "webpack-dev-server",
     "postinstall": "npm run build",
-    "start": "node index.js"
+    "start": "node index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -38,7 +40,8 @@
     "react-select": "^1.0.0-rc.3",
     "redux": "^3.6.0",
     "redux-form": "^6.5.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
@@ -77,5 +80,6 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1",
     "webpack-stream": "^3.2.0"
-  }
+  },
+  "snyk": true
 }
